@@ -4,12 +4,12 @@
         // append data of APOD to card with class of .apod
         var quotesQuery = 'http://quotes.rest/quote.json?maxlength=100&author=carl%20sagan&api_key=ZkXJZcqV_BbAAwTS_A93NAeF';
         // console.log(quotesQuery);
-        var podQuery = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+        var podQuery = 'https://api.nasa.gov/planetary/apod?api_key=omVNer26rAfPOkqm3gxZvnjwPJxr6OACKPBuh34M';
         //console.log(podQuery);
-        var $xhr = $.getJSON(quotesQuery);
-        $xhr.done(function(data) {
-                if ($xhr.status !== 200) {
-                    console.log("there was an error")
+        var quotesObject = $.getJSON(quotesQuery);
+        quotesObject.done(function(data) {
+                if (quotesObject.status !== 200) {
+                    console.log("there was an error");
                     return;
                 } else {
                   //console.log(data);
@@ -17,19 +17,24 @@
                     var quote = data.contents.quote;
                     // console.log(quote);
                     // console.log(author);
-                    $("#quote").html("<p>" + quote + "</p>");
-                    $("#author").html("<p>" + author + "</p>");
+
+                    $("#quoteDiv").html("<p>" + quote + "</p>");
+                    $("#authorDiv").html("<p>" + author + "</p>");
                 }
             });
 
-            var $xhr = $.getJSON(podQuery);
-            $xhr.done(function(data) {
-                    if ($xhr.status !== 200) {
-                        console.log("there was an error")
+            var apodObject = $.getJSON(podQuery);
+            apodObject.done(function(data) {
+                    if (apodObject.status !== 200) {
+                        console.log("there was an error");
                         return;
                     } else {
-                      var img = data.url;
-                      //console.log(img);
+                      var title = data.title;
+                      var pic = data.url;
+                      // console.log(pic);
+                      // console.log(title);
+                      $("#picDiv").attr('src', pic);
+                      $("#titleDiv").html("<p>" + title + "</p>");
 
                         //append URL of IMG to CARD.
                     }

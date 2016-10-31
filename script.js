@@ -31,12 +31,17 @@
                     } else {
                       var title = data.title;
                       var pic = data.url;
+                      var content = data.explanation;
+                      var date = data.date;
+                      console.log(data);
+                      // console.log(content);
                       // console.log(pic);
                       // console.log(title);
+                      // console.log(data.date);
                       $("#picDiv").attr('src', pic);
                       $("#titleDiv").html("<p>" + title + "</p>");
-
-                        //append URL of IMG to CARD.
+                      $("#contentDiv").html("<p>" + content + "</p>");
+                      $("#dateDiv").html("<p>" + date + "</p>");
                     }
                 });
 

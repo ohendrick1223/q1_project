@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,96 +10,110 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
     <!-- fonts baby! -->
     <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Bungee+Inline|Chathura|Cinzel|IM+Fell+English+SC|Julius+Sans+One|Michroma|Montserrat+Subrayada|Rationale|Syncopate" rel="stylesheet">
-
     <!-- My css file -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 <!-- ===============================navbar=========================== -->
-<body class= "blue-grey">
+<body class="blue-grey">
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper grey darken-2">
-                <a href="index.html" class="active brand-logo">HOME</a>
+                <ul>
+                    <li class="active left"><a href="index.html" class="fontType">HOME</a></li>
+                </ul>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li class="active"><a href="inspiration.html">INSPIRATION</a></li>
-                    <li class="active"><a href="sightings.html">SIGHTINGS</a></li>
-                    <li class="active"><a href="space_sounds.html">SPACE SOUNDS</a></li>
+                    <li class="active"><a href="inspiration.html" class="fontType">INSPIRATION</a></li>
+                    <li class="active"><a href="sightings.html" class="fontType">SIGHTINGS</a></li>
+                    <li class="active"><a href="space_sounds.html" class="fontType">SPACE SOUNDS</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <!-- ====main container===== -->
-        <div class="row">
-            <div class="col s12">
-                <h1 class="center-align headingFont">LOOK UP</h1>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col s12 picStyles">
-                    <img id="picDiv" class="image-override" src="img/placeholder.png">
-                    <div id="dateDiv" class="flow-text white-text"><span id="dateBox"><!--jquery--></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="title-date row">
-                <span id="titleDiv" class="col s12 flow-text valign-wrapper center-align titleFont">
-                  <div id="titleDivContent" class="valign"></div>
-                </span>
-            </div>
-        </div>
-        <div class="container">
-          <div class="card-content contentFont" id="contentDiv"><!--jquery--></div>
-        </div>
-
+<!-- ====main container===== -->
+<div class="row">
+  <div class="col s12">
+    <h1 class="center-align headingFont">LOOK UP</h1>
+    <p class="center-align tagLine"> Your hub for Insterstellar Interests</p>
+  </div>
+</div>
+<!-- <div class="container">
+  <div id="results" class="slider image-override card-image-override">
+    <ul id="slides" class="slides">
+    </ul>
+  </div>
+</div> -->
 <div class="container">
-    <div class="row">
-        <div class="col s6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title" id="quoteDiv"><!--jquery--></span>
-                    <p class="card-action white-text" id="authorDiv"><!--jquery--></p>
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Kepler</span>
-                    <p>Twitter API</p>
-                </div>
-                <div class="card-action">
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="slider carouselOverride">
+    <ul class="slides">
+      <li>
+
+      </li>
+      <!-- <li>
+
+      </li>
+      <li>
+
+      </li>
+      <li>
+
+      </li> -->
+    </ul>
+  </div>
 </div>
 
-    <!-- ===================footer=============== -->
-    <footer class="page-footer grey darken-2">
-        <div class="footer-copyright">
-            <div class="container">
-                Powered by: Twitter<i class="tiny material-icons">fiber_manual_record</i>TheySaidSo<i class="tiny material-icons">fiber_manual_record</i>NUFORC<i class="tiny material-icons">fiber_manual_record</i>NASA
-                <a class="grey-text text-lighten-4 right" href="#!">Resources</a>
-            </div>
-        </div>
-    </footer>
 
+<div class="container">
+  <div id="results">
+
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title quoteFont" id="quoteDiv"><!--$-->
+          </span>
+            <p class="card-action white-text authorFont" id="authorDiv"><!--$-->
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Kepler</span>
+            <p>Twitter API</p>
+        </div>
+        <div class="card-action"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- =====footer======== -->
+<footer class="page-footer grey darken-2">
+  <div class="footer-copyright">
+    <div class="container">
+        Powered by: | Twitter | TheySaidSo | NUFORC | NASA
+        <a class="grey-text text-lighten-4 right" href="#!">| Resources |</a>
+    </div>
+  </div>
+</footer>
     <!-- Javascript SCRIPTS -->
     <!-- jquery script -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- materialize javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <!-- date formatting script -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
     <!-- my javascript file -->
     <script src="script.js"></script>
 
 
-</body>
-
+  </body>
 </html>

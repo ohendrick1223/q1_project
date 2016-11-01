@@ -4,17 +4,30 @@
 
 .image-override {
   position: relative;
+  height: 800px;
+  width: 900px;
+  /*margin-left: 25%;*/
+  margin-right: 25%;
+  border-top: 2px double black;
+  border-bottom: 2px double black;
+  border-left: 2px double black;
+  border-right: 2px double black;
+
 }
 
-#dateDiv {
+.carouselOverride {
+  height: 800px;
+  width: 900px;
+}
+
+.dateDiv {
   position: absolute;
-   bottom: 300px;
-   /*left: 0;*/
-   /*margin: 50%*/
-   width: 25%;
+   /*top: 50%;*/
+   /*margin-left: 25%*/
+
 }
 
-#dateBox {
+.dateBox {
   color: white;
    font: bold 24px/45px Helvetica, Sans-Serif;
    letter-spacing: -1px;
@@ -22,10 +35,6 @@
    background: rgba(0, 0, 0, 0.7);
    padding: 10px;
 }
-/*
-.picStyles {
-  border: 2px solid black;
-}*/
 
 #titleDiv {
 margin:0 auto;
@@ -36,7 +45,12 @@ margin:0 auto;
 
 .headingFont {
   font-family: Bungee Inline;
-
+  /*font-family: Montserrat Subrayada;*/
+  font-size: 150px;
+}
+.tagLine {
+  font-family: Bungee Inline;
+  font-size: 30px;
 }
 
 .titleFont {
@@ -49,3 +63,22 @@ margin:0 auto;
   font-size: 15px;
 
 }
+
+.fontType {
+  font-family: Amatica SC;
+  font-size: 25px;
+}
+
+.quoteFont {
+  font-family: Helvetica;
+}
+
+.authorFont {
+  font-family: Helvetica;
+}
+
+/*.picContainer {
+  width: 200px;
+  height: 200px;
+
+}*/

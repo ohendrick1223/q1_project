@@ -1,7 +1,7 @@
 (function() {
     "use strict";
-$('.slider').slider({full_width: true, height: '800px'});
-$('.slider').slider('next');
+// $('.slider').slider({full_width: true, height: '800px'});
+
 
     var quotesQuery = 'http://quotes.rest/quote.json?maxlength=100&author=carl%20sagan&api_key=ZkXJZcqV_BbAAwTS_A93NAeF';
     var picQuery = 'https://api.nasa.gov/planetary/apod?api_key=omVNer26rAfPOkqm3gxZvnjwPJxr6OACKPBuh34M';
@@ -38,18 +38,21 @@ $('.slider').slider('next');
                   var pic = data.url;
                   var content = data.explanation;
                   var date = moment(data.date);
+        // $('#carousel')
         $('#results')
+        // .append($('<li>')
             .append($('<div>')
+
                 .append($('<img>').attr('src',pic).addClass('image-override col s12')
 
-                .append($("<div>").html("<p>" + moment(date).format('MMMM Do YYYY') + "</p>").addClass('center-align white-text dateDiv dateBox')))
+                    .append($("<div>").html("<p class='dateDiv dateBox'>" + moment(date).format('MMMM Do YYYY') + "</p>").addClass('center-align white-text'))
+                  )
 
-                .append($('<div>').html("<p class='title'>" + title).addClass('col s12 flow-text valign-wrapper center-align titleFont'))
+                .append($("<div>").html("<p class='title'>" + title + "</p>").addClass('col s12 flow-text valign-wrapper center-align titleFont'))
 
-                .append($('<div>').html("<p class='card-content contentFont'>" + content + "</p>"))
 
-            );
-
+            .append($('<div>').html("<p>" + content + "</p>").addClass('card-content contentFont'))
+          );
 
     }
 

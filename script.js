@@ -1,6 +1,6 @@
 (function() {
     "use strict";
-
+$('.parallax').parallax();
     var quotesQuery = 'http://quotes.rest/quote.json?maxlength=100&author=carl%20sagan&api_key=ZkXJZcqV_BbAAwTS_A93NAeF';
     var picQuery = 'https://api.nasa.gov/planetary/apod?api_key=omVNer26rAfPOkqm3gxZvnjwPJxr6OACKPBuh34M';
 
@@ -11,8 +11,8 @@
             } else {
                 var author = data.contents.author;
                 var quote = data.contents.quote;
-                $("#quoteDiv").html("<p>" + "<i class='medium material-icons'>format_quote</i>" + quote + "</p>");
-                $("#authorDiv").html("<p>" + author + "</p>");
+                $("#quoteDiv").html("<p>" + "<i class='medium material-icons'>format_quote</i>" + quote + "<i class='medium material-icons'>format_quote</i>" + "</p>");
+                $("#authorDiv").html("<p>" + "-" + author + "</p>");
             }
         });
 
@@ -67,7 +67,7 @@
             );
     }
 
-    var offset = 250;
+    var offset = 3000;
     var duration = 300;
 
     $(window).scroll(function() {

@@ -11,20 +11,13 @@
   /*border-top: 2px double black;
   border-bottom: 2px double black;
   border-left: 2px double black;
-  border-right: 2px double black;*/
-
-/*}*/
-/*
-.carouselOverride {
-  height: 800px;
-  width: 900px;
-}*/
+  border-right: 2px double black;
+  }*/
 
 .dateDiv {
   position: absolute;
    /*top: 50%;*/
    margin-left: 25%
-
 }
 
 .dateBox {
@@ -77,11 +70,13 @@ margin:0 auto;
 }
 
 .quoteFont {
-  font-family: Helvetica;
+  font-family: Amatica SC;
+  font-size: 45px;
+
 }
 
 .authorFont {
-  font-family: Helvetica;
+  font: bold 45px Amatica SC, Sans-Serif;
 }
 
 .back-to-top {
@@ -103,13 +98,29 @@ margin:0 auto;
   padding: 10px;
  }
 
-/*.back-to-top i {
- font-size: 60px;
- }*/
+
+ .parallax-container {
+   height: 1000px;
+   /*opacity: 0.8;*/
+ }
+ .parallax-container2 {
+   height: 500px;
+   opacity: 0.8;
+ }
+
+ .parallax-container3 {
+   height: 10px;
+   opacity: 0.9;
+ }
 
 
-/*.picContainer {
-  width: 200px;
-  height: 200px;
+ .nasaStyle {
+   font-size: 40px;
+   font-family: Amatica SC;
+   /*position: absolute;*/
 
-}*/
+ }
+
+ .nuforcStyle {
+   position: relative;
+ }

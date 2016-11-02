@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
     <!-- fonts baby! -->
     <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Bungee+Inline|Chathura|Cinzel|IM+Fell+English+SC|Julius+Sans+One|Michroma|Montserrat+Subrayada|Rationale|Syncopate" rel="stylesheet">
+
+    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+
     <!-- My css file -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 <!-- ===============================navbar=========================== -->
+
 <body class="blue-grey">
     <div class="navbar-fixed">
         <nav>
@@ -29,63 +34,76 @@
             </div>
         </nav>
     </div>
-<!-- ====main container===== -->
-<div class="row">
-  <div class="col s12">
-    <h1 class="center-align headingFont">LOOK UP</h1>
-    <p class="center-align tagLine"> Your hub for Insterstellar Interests</p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div id="results" class="center-align">
-<!-- render -->
-  </div>
-  </div>
-<!-- <div class="slider carouselOverride">
-    <ul class="slides" id="carousel"> -->
-    <!-- jquery carousel render -->
-    <!-- <li><img src="pic" alt="placeholder.png" /></li> -->
-    <!-- </ul> -->
-    <!-- <div id="results" class="center-align"> -->
-<!-- render -->
-  <!-- </div> -->
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col s6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title quoteFont" id="quoteDiv"><!--$-->
-          </span>
-            <p class="card-action white-text authorFont" id="authorDiv"><!--$-->
-            </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col s6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Kepler</span>
-            <p>Twitter API</p>
-        </div>
-        <div class="card-action"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- =====footer======== -->
-<footer class="page-footer grey darken-2">
-  <div class="footer-copyright">
+    <!-- ====main container===== -->
     <div class="container">
-        Powered by: | Twitter | TheySaidSo | NUFORC | NASA
-        <a class="grey-text text-lighten-4 right" href="#!">| Resources |</a>
-    </div>
+<div>
+
+    <h1 class="center-align headingFont section title">LOOK UP</h1>
+    <p class="center-align tagLine title"> Your hub for Insterstellar Interests</p>
+</div>
+</div>
+
+<div class="divider grey darken-2"></div>
+<p>
+  <div class="container title">
+    <i class="medium material-icons z-depth-5 grey darken-2">brightness_3</i>
+    <i class="medium material-icons z-depth-5 grey darken-2">brightness_2</i>
+    <i class="medium material-icons z-depth-5 grey darken-2">brightness_1</i>
+    <i class="medium material-icons z-depth-5 grey darken-2">brightness_2</i>
+    <i class="medium material-icons z-depth-5 grey darken-2">brightness_3</i>
   </div>
-</footer>
+</p>
+    <div class="container">
+        <div>
+            <h1 class="apodFont section title">Astronomy Photo of the Day:</h1>
+        </div>
+        <div class="row">
+            <div id="results" class="center-align">
+                <!-- render -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title quoteFont" id="quoteDiv"><!--$-->
+          </span>
+                        <p class="card-action white-text authorFont" id="authorDiv">
+                            <!--$-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Kepler</span>
+                        <p>Twitter API</p>
+                    </div>
+                    <div class="card-action"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====footer======== -->
+    <footer class="page-footer grey darken-2">
+        <div class="footer-copyright">
+            <div class="container">
+                Powered by: | Twitter | TheySaidSo | NUFORC | NASA
+                <a class="grey-text text-lighten-4 right" href="#!">| Resources |</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" style="display: inline;">
+      Back to Top
+    </a>
+
+
     <!-- Javascript SCRIPTS -->
     <!-- jquery script -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -97,5 +115,6 @@
     <script src="script.js"></script>
 
 
-  </body>
+</body>
+
 </html>

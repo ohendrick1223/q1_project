@@ -1,19 +1,19 @@
-.card-image-override {
+/*.card-image-override {
   height: 300px;
-}
+}*/
 
-.image-override {
+/*.image-override {
   position: relative;
   height: 800px;
-  width: 900px;
+  width: 900px;*/
   /*margin-left: 25%;*/
-  margin-right: 25%;
+  /*margin-right: 25%;*/
   /*border-top: 2px double black;
   border-bottom: 2px double black;
   border-left: 2px double black;
   border-right: 2px double black;*/
 
-}
+/*}*/
 /*
 .carouselOverride {
   height: 800px;
@@ -22,7 +22,7 @@
 
 .dateDiv {
   position: absolute;
-   top: 50%;
+   /*top: 50%;*/
    margin-left: 25%
 
 }
@@ -59,6 +59,11 @@ margin:0 auto;
   font-family: Montserrat Subrayada;
 }
 
+.apodFont {
+  font-family: Bungee Inline;
+  font-size: 20px;
+}
+
 .contentFont {
   /*font-family: Chathura;*/
   font-family: michroma;
@@ -78,6 +83,30 @@ margin:0 auto;
 .authorFont {
   font-family: Helvetica;
 }
+
+.back-to-top {
+ margin: 5%;
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ width: 10  0px;
+ height: 70px;
+ z-index: 100;
+ display: none;
+ text-decoration: none;
+
+ color: white;
+  font: bold 20px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+ }
+
+/*.back-to-top i {
+ font-size: 60px;
+ }*/
+
 
 /*.picContainer {
   width: 200px;

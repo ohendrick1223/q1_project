@@ -54,7 +54,7 @@ margin:0 auto;
 
 .apodFont {
   font-family: Bungee Inline;
-  font-size: 20px;
+  font-size: 60px;
 }
 
 .contentFont {
@@ -104,7 +104,7 @@ margin:0 auto;
    /*opacity: 0.8;*/
  }
  .parallax-container2 {
-   height: 500px;
+   height: 1000px;
    opacity: 0.8;
  }
 

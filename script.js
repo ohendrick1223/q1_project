@@ -7,11 +7,16 @@
 
     $('.parallax').parallax(); //initialize parallax
 
+    $('#modal1').modal(); //initialize pop-up for table data
+
+
+    // $('#modal1').modal('open');
+
     var quotesQuery = 'http://quotes.rest/quote.json?maxlength=100&author=carl%20sagan&api_key=ZkXJZcqV_BbAAwTS_A93NAeF';
     var picQuery = 'https://api.nasa.gov/planetary/apod?api_key=omVNer26rAfPOkqm3gxZvnjwPJxr6OACKPBuh34M';
     var ufoQuery = 'https://www.quandl.com/api/v3/datasets/NUFORC/SIGHTINGS.json?api_key=xAux-zbcJXrBiFy32jqC&start_date=2015-10-31';
-
-    // =============quote request===========
+    var ufoQueryMore = 'https://www.quandl.com/api/v3/datasets/NUFORC/SIGHTINGS.json?api_key=xAux-zbcJXrBiFy32jqC&start_date=1996-10-31'
+        // =============quote request===========
     $.getJSON(quotesQuery)
         .done(function(data) {
             if (data.error) {
@@ -38,15 +43,15 @@
                 var date = moment(data.date);
                 // console.log(date);
                 for (var i = 0; i < 30; i++) {
-                    var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date='
+                    var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date=' + date.format('YYYY-M-DD');
+                    date.subtract(1, 'days');
+//console.log(date);
+                    //queries url (which is equal to current day and previous seven dates/metadata associated.)
+
+                    //The above formatting creates a 500 server-side error, because .moment(date) method updates a good 6 hours before it's actually updating, and thus can't find a url for "tomorrow".
 
                     // + date.subtract(1, 'days').format('YYYY-M-DD');
 
-                    //This formatting creates a 500 server-side error, because .moment(date) method updates a good 6 hours before it's actually updating, and thus can't find a url for "tomorrow".
-                    +date.format('YYYY-M-DD');
-                    date.subtract(1, 'days')
-
-                    //queries url (which is equal to current day and previous seven dates/metadata associated.)
                     allImages.push($.getJSON(DataForPage));
                 }
                 Promise.all(allImages).then(function(results) {
@@ -63,7 +68,10 @@
         var title = data.title;
         var pic = data.url;
         var content = data.explanation;
-        var date = moment(data.date);
+        //date is something we're trying to get the time stamp correct.
+        var date =
+        moment(data.date).add(moment().hours(),'hours').add(moment().minute(),'minutes');
+        //console.log(date.toString());
         var $img = $('<img>');
         $img.error(function() {
             // console.log('error', $(this));
@@ -113,7 +121,8 @@
                 for (var prop in ufoData) {
                     //console.log(ufoData[prop][0]);
                     //console.log(ufoData[prop][1]);
-                    allMonths.push(ufoData[prop][0]);
+                    var monthlyDate = moment(ufoData[prop][0]).format('MMMM YYYY');
+                    allMonths.push(monthlyDate);
                     allCounts.push(ufoData[prop][1]);
                 }
                 var renderUfo = function(data) {
@@ -124,7 +133,35 @@
                     }
                 };
                 renderUfo(data);
-              }
+            }
         });
 
-})();
+    $.getJSON(ufoQueryMore)
+        .done(function(data) {
+            var allMonths = [];
+            var allCounts = [];
+            //console.log(data.dataset.data);
+            if (data.error) {
+                console.log('there was an error');
+            } else {
+                var ufoData = data.dataset.data;
+                for (var prop in ufoData) {
+                    //console.log(ufoData[prop][0]);
+                    //console.log(ufoData[prop][1]);
+                    var monthlyDate = moment(ufoData[prop][0]).format('MMMM YYYY');
+                    allMonths.push(monthlyDate);
+                    allCounts.push(ufoData[prop][1]);
+                }
+                var renderUfo = function(data) {
+                    for (var m = 0; m < allMonths.length; m++) {
+                        $(".tbodyMonthMore").append($("<tr>").html("<td>" + allMonths[m] + "</td>"));
+                        $(".tbodyCountMore")
+                            .append($("<tr>").html("<td>" + allCounts[m] + "</td>"));
+                    }
+                };
+                renderUfo(data);
+            }
+        });
+
+
+})(); //end of doc.ready

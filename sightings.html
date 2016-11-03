@@ -15,8 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Bungee+Inline|Chathura|Cinzel|IM+Fell+English+SC|Julius+Sans+One|Michroma|Montserrat+Subrayada|Rationale|Syncopate" rel="stylesheet">
     <!-- My css file -->
     <link rel="stylesheet" href="styles.css" />
+
 </head>
 <!-- ================navbar====== -->
+
 <body>
     <div class="navbar-fixed">
         <nav>
@@ -32,75 +34,137 @@
             </div>
         </nav>
     </div>
-<!-- ===============main body========= -->
+    <!-- ===============main body========= -->
     <div class="parallax-container2">
-      <div class="parallax"><img src="img/ufo.jpg"></div>
-    </div>
+        <!-- <div class="parallax"><img src="img/ufo.jpg"></div> -->
 
     <div class="container section">
-      <!-- <section class="grey"> -->
+      <div class="section"></div>
+      <div class="section"></div>
+      <div class="section"></div>
+      <div class="section"></div>
+      <div class="section"></div>
+      <div class="section"></div>
+        <!-- <section class="grey"> -->
         <div class="row">
             <div class="col s12 section">
-                <div class="center-align apodFont">
-                    The National Unidentified Flying Object Reporting Center
-                    <p class="nuforcTagline"> "Dedicated to the collection and dissemination of Objective UFO Data"</p>
+
+                <div class="center-align apodFont white-text">
+                    Sightings from Space
+                    <p class="nuforcTagline white-text"> powered by:<br> N.U.F.O.R.C</p>
+                    <p class="fontType">
+                      (National Unidentified Flying Object Reporting Center)
+                    </p>
                 </div>
-                <div class="section"></div>
-                <div class="section"></div>
-                <div class="section"></div>
-                <div class="section"></div>
+
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+                <div class="container">
+                  <p class="fontType white-text center-align">
+                  Each month NUFORC compiles a detailed UFO sightings report. <br>Most of this information is only accessible via the official <br>NUFORC website. Below is the only data accesbile outside of <br>the official NUFORC website
+                </p>
               </div>
             </div>
-      <!-- </section> -->
+        </div>
+        <section>
+
+        </section>
     </div>
-
-<div class="conatiner section">
-  <section class="">
-  <div class="row">
-  <table class="bordered highlight centered col s6">
-      <thead>
-          <tr>
-              <th class="fontType center-align section">Monthly Reports</th>
-          </tr>
-      </thead>
-      <tbody id="tbodyMonth">
-          <!-- jquery render -->
-      </tbody>
-    </table>
-
-      <table class="bordered highlight centered col s6">
-          <thead>
-              <tr>
-                  <th class="fontType center-align section">Number of Sightings reported</th>
-              </tr>
-          </thead>
-          <tbody id="tbodyCount">
-              <!-- jquery render -->
-          </tbody>
-      </table>
-
-      <p class="fontType center-align section">
-          For more comprehensive info, and links to detailed sightings click on the the NUFORC link in <a class="indigo-text text-darken-3" href="resources.html"> Resources</a> <i class="material-icons">trending_down</i>
-      </p>
-</div>
-</section>
-</div>
-
-<div class="parallax-container">
-  <div class="parallax"><img src="img/ufo2.jpg"></div>
-</div>
-
-    <!-- ========twitter api======== -->
+      <div class="parallax"><img src="img/ufo.jpg"></div>
+    </div>
+<!-- ==========table data====== -->
+<div class=" indigo darken-1">
     <div class="container section">
-        <div class="col s12 section twitterAppend center-align">
-            <div class="section">
-                <p class="nasaStyle">
-                    Nasa's Kepler Project:
+        <section class="">
+            <div class="row">
+                <table class="bordered highlight centered col s6">
+                    <thead>
+                        <tr>
+                            <th class="fontType center-align section">Monthly Reports</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyMonth">
+                        <!-- jquery render -->
+                    </tbody>
+                </table>
+
+                <table class="bordered highlight centered col s6">
+                    <thead>
+                        <tr>
+                            <th class="fontType center-align section">Number of Sightings reported</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyCount">
+                        <!-- jquery render -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    </div>
+<div class="section"></div>
+    <!-- <div class="container">
+        <div class="row"> -->
+        <div class="center-align">
+
+
+
+            <a class="modal-trigger waves-effect waves-light btn col s12 indigo darken-3 fontType" href="#modal1">See more data</a>
+            </div>
+        <!-- </div>
+    </div> -->
+
+    <!-- Modal Structure -->
+    <div class="container">
+    <div class="row">
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4 class="nuforcTagline center-align">UFO sightings <br> 1996 - 2015</h4>
+                <p>
+                    <div class="row">
+                        <table class="bordered highlight centered col s6">
+                            <thead>
+                                <tr>
+                                    <th class="fontType center-align section">Monthly Reports</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbodyMonthMore">
+                                <!-- jquery render -->
+                            </tbody>
+                        </table>
+
+                        <table class="bordered highlight centered col s6">
+                            <thead>
+                                <tr>
+                                    <th class="fontType center-align section">Number of Sightings reported</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbodyCountMore">
+                                <!-- jquery render -->
+                            </tbody>
+                        </table>
+                    </div>
                 </p>
             </div>
-            <div class="divider"></div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Exit</a>
+            </div>
         </div>
     </div>
+
+
+    <p class="fontType center-align section">
+        For more comprehensive info, and links to detailed sightings click on the the NUFORC link in <a class="indigo-text text-darken-3" href="resources.html"> Resources</a> <i class="material-icons">trending_down</i>
+    </p>
+
+    </div>
+
     <!-- ======footer====== -->
     <footer class="page-footer grey darken-2">
         <div class="footer-copyright">
@@ -111,11 +175,14 @@
         </div>
     </footer>
 
+
     <!-- Javascript SCRIPTS -->
     <!-- jquery script -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- materialize javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- date formatting script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
     <!-- my javascript file -->
     <script src="script.js"></script>
 </body>

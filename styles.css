@@ -55,12 +55,14 @@ margin:0 auto;
 .apodFont {
   font-family: Bungee Inline;
   font-size: 60px;
+
 }
 
 .contentFont {
   /*font-family: Chathura;*/
-  font-family: michroma;
-  font-size: 15px;
+  font-family: Didact Gothic;
+  font-size: 20px;
+  color: white;
 
 }
 
@@ -104,7 +106,7 @@ margin:0 auto;
    /*opacity: 0.8;*/
  }
  .parallax-container2 {
-   height: 200px;
+   height: 1000px;
    /*opacity: 0.9;*/
    position: relative;
  }

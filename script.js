@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    $.ajaxSetup({cache:false});
+    $.ajaxSetup({cache:false}); //bug fix for quote refresh
 
     $('.back-to-top').hide(); //bug fix for b2top btn
 
@@ -29,7 +29,7 @@
             }
         });
 
-    $.ajaxSetup({cache:true});
+    $.ajaxSetup({cache:true}); //bug fix back to normal-pic query/quoterefresh
 
     // ================pic of day request========
     $.getJSON(picQuery)
@@ -45,10 +45,9 @@
                     var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date='
                     + date.format('YYYY-M-DD');
                     date.subtract(1, 'days');
-//console.log(date);
                     //queries url (which is equal to current day and previous seven dates/metadata associated.)
 
-                    //The above formatting creates a 500 server-side error, because .moment(date) method updates a good 6 hours before it's actually updating, and thus can't find a url for "tomorrow".
+                    //The above formatting creates a 500 server-side error, because .moment(date) method updates a good 6 hours (UTC time) before it's actually updating in API and thus can't find a url for "tomorrow".
 
                     // + date.subtract(1, 'days').format('YYYY-M-DD');
 
@@ -74,39 +73,18 @@
         //console.log(date.toString());
         var $img = $('<img>');
         $img.error(function() {
-            // console.log('error', $(this));
             $(this).attr('src', 'img/no-image-placeholder.png');
         });
         $img.attr('src', pic).addClass('image-override col s12 materialboxed z-depth-5');
+
         $('#results')
-            // .append($('<li>')
             .append($('<div>')
                 .append($img)
-
                 .append($("<div>").html("<p class='dateDiv dateBox'>" + moment(date).format('MMMM Do YYYY') + "</p>").addClass('center-align white-text'))
-
-                .append($("<div>").html("<p class='title'>" + title + "</p>").addClass('col s12 flow-text valign-wrapper center-align titleFont'))
-
+                .append($("<div>").html("<p class='title white-text'>" + title + "</p>").addClass('col s12 flow-text valign-wrapper center-align titleFont'))
                 .append($('<div>').html("<p>" + content + "</p>").addClass('card-content contentFont flow-text section'))
             );
     }
-    // ==============back to top button========
-    var offset = 3000;
-    var duration = 300;
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > offset) {
-            $('.back-to-top').fadeIn(duration);
-        } else {
-            $('.back-to-top').fadeOut(duration);
-        }
-    });
-    $('.back-to-top').click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, duration);
-        return false;
-    });
 
     // ========UFO request=============
     $.getJSON(ufoQuery)
@@ -136,6 +114,7 @@
             }
         });
 
+//=====data to dropdown table======
     $.getJSON(ufoQueryMore)
         .done(function(data) {
             var allMonths = [];
@@ -163,19 +142,7 @@
             }
         });
 
-        // =======slideDown effects======
-//         function slideEffect() {
-//           if ( $( "#slideDown" ).is( ":hidden" ) ) {
-//             console.log("sliding");
-//             $( "#slideDown" ).slideDown(10000);
-//           } else {
-//             $( "#slideDown" ).hide();
-//
-//     console.log("hiding sliding")
-// }
-// }
-// slideEffect();
-  //
+// ======header animation====
   function slideEffect() {
     if ( $( "#slideDown" ).is( ":hidden" ) ) {
       $( "#slideDown" ).slideToggle(7000, 'easeOutBack');
@@ -191,6 +158,25 @@
     $( ".slideTag" ).hide();
   }
 } tagSlide();
+
+// ==============back to top button========
+var offset = 3000;
+var duration = 300;
+$(window).scroll(function() {
+    if ($(this).scrollTop() > offset) {
+        $('.back-to-top').fadeIn(duration);
+    } else {
+        $('.back-to-top').fadeOut(duration);
+    }
+});
+$('.back-to-top').click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, duration);
+    return false;
+});
+
 
 
 

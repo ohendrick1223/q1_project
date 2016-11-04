@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    // $.ajaxSetup({cache:false});
+    $.ajaxSetup({cache:false});
 
     $('.back-to-top').hide(); //bug fix for b2top btn
 
@@ -9,14 +9,13 @@
 
     $('#modal1').modal(); //initialize pop-up for table data
 
-
-    // $('#modal1').modal('open');
-
     var quotesQuery = 'http://quotes.rest/quote.json?maxlength=100&author=carl%20sagan&api_key=ZkXJZcqV_BbAAwTS_A93NAeF';
     var picQuery = 'https://api.nasa.gov/planetary/apod?api_key=omVNer26rAfPOkqm3gxZvnjwPJxr6OACKPBuh34M';
     var ufoQuery = 'https://www.quandl.com/api/v3/datasets/NUFORC/SIGHTINGS.json?api_key=xAux-zbcJXrBiFy32jqC&start_date=2015-10-31';
     var ufoQueryMore = 'https://www.quandl.com/api/v3/datasets/NUFORC/SIGHTINGS.json?api_key=xAux-zbcJXrBiFy32jqC&start_date=1996-10-31'
+
         // =============quote request===========
+
     $.getJSON(quotesQuery)
         .done(function(data) {
             if (data.error) {
@@ -30,7 +29,7 @@
             }
         });
 
-    // $.ajaxSetup({cache:true});
+    $.ajaxSetup({cache:true});
 
     // ================pic of day request========
     $.getJSON(picQuery)
@@ -43,14 +42,15 @@
                 var date = moment(data.date);
                 // console.log(date);
                 for (var i = 0; i < 30; i++) {
-                    var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date=' + date.format('YYYY-M-DD');
-                    date.subtract(1, 'days');
+                    var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date='
+                    // + date.format('YYYY-M-DD');
+                    // date.subtract(1, 'days');
 //console.log(date);
                     //queries url (which is equal to current day and previous seven dates/metadata associated.)
 
                     //The above formatting creates a 500 server-side error, because .moment(date) method updates a good 6 hours before it's actually updating, and thus can't find a url for "tomorrow".
 
-                    // + date.subtract(1, 'days').format('YYYY-M-DD');
+                    + date.subtract(1, 'days').format('YYYY-M-DD');
 
                     allImages.push($.getJSON(DataForPage));
                 }
@@ -127,9 +127,9 @@
                 }
                 var renderUfo = function(data) {
                     for (var m = 0; m < allMonths.length; m++) {
-                        $("#tbodyMonth").append($("<tr>").html("<td>" + allMonths[m] + "</td>"));
+                        $("#tbodyMonth").append($("<tr>").html("<td class='white-text'>" + allMonths[m] + "</td>"));
                         $("#tbodyCount")
-                            .append($("<tr>").html("<td>" + allCounts[m] + "</td>"));
+                            .append($("<tr>").html("<td class='white-text'>" + allCounts[m] + "</td>"));
                     }
                 };
                 renderUfo(data);

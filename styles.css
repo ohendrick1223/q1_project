@@ -126,3 +126,11 @@ margin:0 auto;
    font-size: 30px;
    font-family: Bungee Inline;
  }
+
+#slideDown {
+  display: none;
+}
+
+.slideTag {
+  display: none;
+}

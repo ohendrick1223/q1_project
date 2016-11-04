@@ -163,5 +163,35 @@
             }
         });
 
+        // =======slideDown effects======
+//         function slideEffect() {
+//           if ( $( "#slideDown" ).is( ":hidden" ) ) {
+//             console.log("sliding");
+//             $( "#slideDown" ).slideDown(10000);
+//           } else {
+//             $( "#slideDown" ).hide();
+//
+//     console.log("hiding sliding")
+// }
+// }
+// slideEffect();
+  //
+  function slideEffect() {
+    if ( $( "#slideDown" ).is( ":hidden" ) ) {
+      $( "#slideDown" ).slideToggle(7000, 'easeOutBack');
+    } else {
+      $( "#slideDown" ).hide();
+    }
+  } slideEffect();
+
+  function tagSlide() {
+    if ( $( ".slideTag" ).is( ":hidden" ) ) {
+    $( ".slideTag" ).fadeIn(17000, 'easeOutBack');
+  } else {
+    $( ".slideTag" ).hide();
+  }
+} tagSlide();
+
+
 
 })(); //end of doc.ready

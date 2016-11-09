@@ -16,3 +16,8 @@ The API(s) my project uses are: TheySaidSO(a quotes database API), Nasa’s APOD
 
 	Link to deployed website: http://olivia_q1project.surge.sh/
 	note*** do not view after 6pm (moment.js bug regarding UST timezone unfixed)
+
+	Link to wireframes: https://oliviahendrick.proto.io/player/?id=a0bdcabf-4d5b-4a90-810b-9df69788f400
+
+	Link to pivotal tracker:
+	https://www.pivotaltracker.com/n/projects/1908873

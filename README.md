@@ -14,7 +14,7 @@ The API(s) my project uses are: TheySaidSO(a quotes database API), Nasa’s APOD
 	2. Have my quotes API producing random Car Sagan quotes upon each refresh 		displayed properly in a medium sized card centered under the photo(s)
 	3. Have a resources link from my footer that lists all APIs used as well as links to the 	most advanced simulations provided primarily by NASA as well as other Institutes. This 	page will also house links to Nasa’s Kepler Twitter feed, inspiring images, a database stored on Soundcloud of interesting sounds recorded from space (via NASA) (If I don’t get my Space sounds API up and running) and other interesting websites.
 
-	Link to deployed website: http://olivia_q1project.surge.sh/
+	Link to deployed website: lookup.surge.sh
 	note*** do not view after 6pm (moment.js bug regarding UST timezone unfixed)
 
 	Link to wireframes: https://oliviahendrick.proto.io/player/?id=a0bdcabf-4d5b-4a90-810b-9df69788f400

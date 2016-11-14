@@ -44,9 +44,10 @@
                 var date = moment(data.date);
                 // console.log(date);
                 for (var i = 0; i < 30; i++) {
-                    var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date='                    + date.subtract(1, 'days').format('YYYY-M-DD');
-                    // + date.format('YYYY-M-DD');
-                    // date.subtract(1, 'days');
+                    var DataForPage = 'https://api.nasa.gov/planetary/apod?api_key=lWSexX3DkOyuXuh0V67U54MI7UAuFEyySVEFFJkz&date='
+                    // + date.subtract(1, 'days').format('YYYY-M-DD');
+                    + date.format('YYYY-M-DD');
+                    date.subtract(1, 'days');
                     //queries url (which is equal to current day and previous seven dates/metadata associated.)
 
                     //The above formatting creates a 500 server-side error, because .moment(date) method updates a good 6 hours (UTC time) before it's actually updating in API and thus can't find a url for "tomorrow".

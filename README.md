@@ -1,6 +1,6 @@
 # q1_project
-My quarter 1 project repo
 
+www.lookup.surge.sh
 
 My project provides information on interesting spatial phenomena, including, but not limited to, sightings/data regarding unidentified flying objects. My data is curated and displayed in such a way, that a user does not need to parse through unending useless fallacies, hoaxes and the like, but can instead focus on the facts and only the leading, most reputable sources for such sensitive information.
 Serious space enthusiasts often have this problem, as they are inundated with people who just want something to believe in and don’t care whether their data is measurable or sourced from trustable places.
@@ -15,10 +15,13 @@ The API(s) my project uses are: TheySaidSO(a quotes database API), Nasa’s APOD
 	3. Have a resources link from my footer that lists all APIs used as well as links to the 	most advanced simulations provided primarily by NASA as well as other Institutes. This 	page will also house links to Nasa’s Kepler Twitter feed, inspiring images, a database stored on Soundcloud of interesting sounds recorded from space (via NASA) (If I don’t get my Space sounds API up and running) and other interesting websites.
 
 	Link to deployed website: lookup.surge.sh
-	
+
 	note*** do not view after 6pm (moment.js bug regarding UST timezone unfixed)
 
 	Link to wireframes: https://oliviahendrick.proto.io/player/?id=a0bdcabf-4d5b-4a90-810b-9df69788f400
 
 	Link to pivotal tracker:
 	https://www.pivotaltracker.com/n/projects/1908873
+
+	A Walk-through of my page in the event that there is a 500 internal server error (an issue that pops up from time to time due to a date/time issue):
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/x_dh-Y5NU5s" frameborder="0" allowfullscreen></iframe>

@@ -25,5 +25,4 @@ The API(s) my project uses are: TheySaidSO(a quotes database API), Nasa’s APOD
 
 	A Walk-through of my page in the event that there is a 500 internal server error (an issue that pops up from time to time due to a date/time issue):
 
-	![Walk Through](https://www.youtube.com/watch?v=x_dh-Y5NU5s&feature=youtu.be)
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/x_dh-Y5NU5s" frameborder="0" allowfullscreen></iframe>
+	[![Walk Through](https://www.youtube.com/watch?v=x_dh-Y5NU5s&feature=youtu.be))(https://www.youtube.com/watch?v=x_dh-Y5NU5s&feature=youtu.be)

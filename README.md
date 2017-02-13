@@ -2,11 +2,10 @@
 
 www.lookup.surge.sh
 
-Look Up provides information on interesting spatial phenomena, including, but not limited to, sightings/data regarding unidentified flying objects. My data is curated and displayed in such a way, that a user does not need to parse through unending useless fallacies, hoaxes and the like, but can instead focus on the facts and only the leading, most reputable sources for such sensitive information.
-Serious space enthusiasts often have this problem, as they are inundated with people who just want something to believe in and don’t care whether their data is measurable or sourced from trustable places.
-My project solves this by providing multiple data access points from a variety of sources that I have hand-picked. My project signals to the user what sort of data they will be looking at through the design elements of my page, as well as the source of the content curated.
+Look Up provides information on interesting spatial phenomena, including, but not limited to, sightings/data regarding unidentified flying objects. My data is curated and displayed in such a way, that a user does not need to parse through misinformation, but can instead focus on the facts and only the leading, most reputable sources for such sensitive information.
 
-The outputs of my project are rendered objects primarily.
+My project solves this by providing multiple data access points from a variety of sources.
+
 The API(s) my project uses are: TheySaidSO(a quotes database API), Nasa’s APOD api, and Quandl/NUFORC’s UFO sightings API. I also use embeds from Twitter and Soundcloud.
 
 
